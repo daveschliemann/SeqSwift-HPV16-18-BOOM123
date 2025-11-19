@@ -1,0 +1,27 @@
+name: SeqSwift BOOM CI
+
+on: [push, pull_request]
+
+jobs:
+  boom:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Biopython
+        run: pip install biopython
+
+      - name: Run BOOM benchmark
+        run: |
+          chmod +x run_hpv_boom.sh
+          ./run_hpv_boom.sh
+
+      - name: Verify results (fail if not BOOM)
+        run: |
+          grep "3450000 mutations detected" output/hpv_boom_run.txt
+          grep "0.000" output/hpv_boom_run.txt  # accepts 0.0008 or better
