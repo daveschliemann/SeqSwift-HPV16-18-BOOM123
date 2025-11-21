@@ -5,7 +5,8 @@
 **3.45 million oncogenic mutations (HPV16 + HPV18) in 0.0069 s**  
 Full pipeline → **<9 s wall time** → **$200 Chromebook**
 
-**Verifiable public demo (5.8 KB – no password needed):**  
+**Verifiable public demo (5.8 KB – encyrption passphrase
+needed):**  
 → https://github.com/daveschliemann/SeqSwift-HPV16-18-BOOM123/releases/download/v1.0/SeqSwift_HPV16_18_BOOM_Nov18.zip.gpg
 
 **Full pilot + source → DM for passphrase to Precision Club™**
